@@ -10,6 +10,8 @@
 		46A637061C4768340000AF22 /* Synco.h in Headers */ = {isa = PBXBuildFile; fileRef = 46A637051C4768340000AF22 /* Synco.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46A6370D1C4768340000AF22 /* Synco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A637021C4768340000AF22 /* Synco.framework */; };
 		46A637121C4768340000AF22 /* SyncoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A637111C4768340000AF22 /* SyncoTests.swift */; };
+		46A6371E1C47694B0000AF22 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6371D1C47694B0000AF22 /* Lock.swift */; };
+		46A6371F1C47694B0000AF22 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6371D1C47694B0000AF22 /* Lock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		46A6370C1C4768340000AF22 /* SyncoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyncoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A637111C4768340000AF22 /* SyncoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncoTests.swift; sourceTree = "<group>"; };
 		46A637131C4768340000AF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46A6371D1C47694B0000AF22 /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		46A636F81C4768340000AF22 = {
 			isa = PBXGroup;
 			children = (
+				46A6371C1C4769440000AF22 /* Classes */,
 				46A637041C4768340000AF22 /* Synco */,
 				46A637101C4768340000AF22 /* SyncoTests */,
 				46A637031C4768340000AF22 /* Products */,
@@ -84,6 +88,14 @@
 				46A637131C4768340000AF22 /* Info.plist */,
 			);
 			path = SyncoTests;
+			sourceTree = "<group>";
+		};
+		46A6371C1C4769440000AF22 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				46A6371D1C47694B0000AF22 /* Lock.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A6371E1C47694B0000AF22 /* Lock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A6371F1C47694B0000AF22 /* Lock.swift in Sources */,
 				46A637121C4768340000AF22 /* SyncoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +322,7 @@
 		46A637171C4768340000AF22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +333,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yukiasai.Synco;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		46A637181C4768340000AF22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
